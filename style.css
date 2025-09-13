@@ -1,0 +1,36 @@
+.hero-banner {
+  position: relative;
+  min-height: 60vh;
+  background: url('images/hero-water.jpg') center/cover no-repeat;
+  overflow: hidden;
+}
+
+/* Pattern overlay */
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('images/pattern-bg.png') repeat;
+  opacity: 0.2; /* adjust transparency */
+  z-index: 1;
+}
+
+/* Fade effect edges */
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0));
+  z-index: 2;
+}
+
+.hero-banner .container {
+  position: relative;
+  z-index: 3;
+}
+
+/* Emphasize water word */
+.tagline .highlight {
+  color: #0d6efd; /* Bootstrap primary */
+  font-weight: bold;
+}
